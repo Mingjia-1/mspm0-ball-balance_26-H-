@@ -120,8 +120,8 @@ STEP_TIMER.peripheral.$assign = "TIMG6";
 
 /*
  * D36A axis 1: STEP=PA22, DIR=PA17 and active-high EN=PB12.
- * HOME_NC is a normally-closed lower switch wired PB4--GND.  It reads high
- * when the switch opens at the lower stop or when its wire breaks.
+ * PB4 is reserved for an optional normally-closed home switch. The final
+ * prototype has no physical limit switch and uses manual level zero instead.
  */
 const BEAM_GPIO = GPIO.addInstance();
 BEAM_GPIO.$name = "BEAM_IO";
@@ -163,3 +163,4 @@ for (let index = 4; index < 8; index++) {
     SYSTEM_GPIO.associatedPins[index].internalResistor = "PULL_UP";
 }
 SYSTEM_GPIO.associatedPins[8].initialValue = "CLEARED";
+
