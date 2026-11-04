@@ -1,6 +1,6 @@
 /**
  * @file beam_motion_controller.h
- * @brief Manual-zero or switch-homed screw-position control.
+ * @brief Manual-zero or optional switch-homed crank-link position control.
  */
 #ifndef BEAM_MOTION_CONTROLLER_H
 #define BEAM_MOTION_CONTROLLER_H
@@ -46,3 +46,4 @@ const char *BeamMotionController_stateText(
     const BeamMotionController *controller);
 
 #endif
+
