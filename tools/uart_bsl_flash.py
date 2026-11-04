@@ -1,6 +1,7 @@
 """Flash MSPM0G3507 MAIN through the ROM UART BSL and a CH340 bridge."""
 import argparse
 import struct
+import sys
 import time
 from pathlib import Path
 
@@ -185,3 +186,4 @@ if __name__ == "__main__":
     except Exception as exc:
         print(f"BSL_FLASH_ABORTED: {exc}", file=sys.stderr, flush=True)
         raise SystemExit(1)
+
