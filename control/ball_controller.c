@@ -2,7 +2,7 @@
  * @file ball_controller.c
  * @brief Vision-based velocity trajectory and adaptive friction controller.
  *
- * The controller never assumes that logical screw zero means the pipe is
+ * The controller never assumes that logical actuator zero means the beam is
  * physically level. Position and velocity close the loop. A bounded probe
  * overcomes local static friction; once motion starts, the probe is removed
  * and its threshold is learned separately for each travel direction.
@@ -225,7 +225,7 @@ int32_t BallController_step(BallController *controller,
     }
 
     if (controller->guardActive != 0U) {
-        /* The direct crank reacts much faster than the former screw. Keep the
+        /* The direct crank reacts quickly. Keep the
          * normal full guard for every other trajectory, but ramp and limit the
          * left-boundary brake while executing the +5 -> -5 move. */
         if ((controller->moveDirection < 0) &&
@@ -338,7 +338,7 @@ int32_t BallController_step(BallController *controller,
         desiredDirection * referenceSpeed;
     /*
      * Visual PD with separate term limits. Long travel must not let P wind
-     * up to a high launch speed; D starts unloading the screw as soon as the
+     * up to a high launch speed; D starts unloading the actuator as soon as the
      * camera reports motion. Static friction is handled only by PROBE below.
      */
     positionTerm =
@@ -496,3 +496,4 @@ const char *BallController_phaseText(const BallController *controller)
     default: return "BALL ERR";
     }
 }
+
