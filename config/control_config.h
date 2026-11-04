@@ -88,9 +88,9 @@
 /*
  * Task 3 vision-trajectory controller.
  *
- * Position and velocity come from MaixCam. Logical screw level is only a
+ * Position and velocity come from MaixCam. Logical actuator level is only a
  * safety reference; it is not used to decide whether the ball is stable.
- * Positive screw lift accelerates the ball toward negative position.
+ * Positive right-end lift accelerates the ball toward negative position.
  */
 #define H_TASK3_CONTROL_PERIOD_MS             (10U)
 #define H_TASK3_TIMEOUT_MS                  (5000U)
@@ -247,3 +247,4 @@
 #define H_FULL_LAP_MIN_TIME_MS              (3000U)
 
 #endif
+
