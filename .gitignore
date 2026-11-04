@@ -1,0 +1,48 @@
+# CCS / SysConfig build output
+Debug/
+Release/
+Objects/
+Listings/
+*.out
+*.map
+*.obj
+*.o
+*.d
+*.mk
+*.hex
+*.bin
+*.elf
+*.axf
+*.log
+*.xml
+!targetConfigs/*.ccxml
+
+# Generated MSPM0 files
+ti_msp_dl_config.c
+ti_msp_dl_config.h
+device_linker.cmd
+device.cmd.genlibs
+
+# Local editor/workspace files
+.settings/
+.metadata/
+.clangd
+.vscode/
+.idea/
+*.launch
+
+# Test logs and captures
+*.csv
+*.ti-txt
+*_bsl.txt
+capture_*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# OS files
+Thumbs.db
+.DS_Store
+
