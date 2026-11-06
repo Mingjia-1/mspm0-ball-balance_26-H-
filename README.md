@@ -106,6 +106,8 @@ python tools/uart_bsl_flash.py --image path/to/firmware_bsl.txt
 
 更详细的步骤见 [`docs/`](docs/)。
 
+如果准备把本项目写入简历，建议阅读 [`docs/INTERVIEW_GUIDE.md`](docs/INTERVIEW_GUIDE.md)。其中包含控制原理、关键参数、问题复盘、方案局限以及高频面试问题。
+
 ## 工程说明
 
 - 本仓库重点公开MSPM0电控固件及其接口设计；MaixCAM模型和视觉端应用未包含在仓库中。
@@ -121,4 +123,5 @@ python tools/uart_bsl_flash.py --image path/to/firmware_bsl.txt
 - 电机、编码器和步进执行机构联调
 - 视觉测量与实时控制系统集成
 - 实车日志采集、问题复现和迭代调参
+
 
